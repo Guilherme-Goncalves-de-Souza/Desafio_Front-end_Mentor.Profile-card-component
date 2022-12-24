@@ -1,0 +1,146 @@
+$font: 'Kumbh Sans', sans-serif;
+$bgcolor-body:  hsl(185, 75%, 39%);
+$color-name-stats: hsl(229, 23%, 23%);
+$color-p: hsl(227, 10%, 46%);
+$bgcolor-line: rgb(240,240,240);
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-color: $bgcolor-body;
+    font-family: $font;
+}
+
+p{
+    color: $color-p;
+}
+
+h1,
+h2{
+    color: $color-name-stats;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+main{
+    z-index: 99;
+
+    height: 23.43rem;
+    max-width: 20.31rem;
+
+    background-color: white;
+    border-radius: 15px;
+    padding-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .bgCard{
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .infoProfile{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        img{
+            border: 4px solid white;
+            border-radius: 99px;
+
+            position: relative;
+            top: -50px;
+        }
+
+        .infoName{
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            
+            width: 104%;
+            margin-top: -30px;
+
+            h1{
+                font-size: 18px;
+            }
+        }
+
+        p.city{
+            margin-top: 10px;
+        }
+    }
+
+    .line{
+        background-color: $bgcolor-line;
+        width: 100%;
+        height: 1px;
+        border: 1px solid $bgcolor-line;
+        margin: 25px 0px;
+        
+    }
+
+    .social{
+        display: flex;
+        flex-direction: row;
+
+        gap: 40px;
+
+        .statistic{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2{
+                text-transform: uppercase;
+            }
+
+            p{
+                letter-spacing: 2px;
+                font-size: 11px;
+            }
+        }
+    }
+
+}
+
+.bgs{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+
+    .bgTop{
+        position: relative;
+        top: -447px;
+        right: -36px;
+    }
+
+    .bgBottom{
+        position: relative;
+        top: 447px;
+        left: -36px;
+    }
+}
+
+@media (max-width: 330px) {
+    main{
+        height: 23.43rem;
+        max-width: 18rem;
+    }
+}
